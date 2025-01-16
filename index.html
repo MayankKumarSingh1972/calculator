@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="theme-switch">
+            <button id="themeToggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+        <div class="mode-switch">
+            <button id="normalMode" class="active">Normal</button>
+            <button id="scientificMode">Scientific</button>
+            <button id="historyBtn">History</button>
+        </div>
+        <div class="calculator">
+            <div class="display">
+                <div id="history-expression" class="history-exp"></div>
+                <input type="text" id="display" readonly>
+            </div>
+            <div class="buttons normal-buttons">
+                <button class="operator" data-value="(">(</button>
+                <button class="operator" data-value=")">)</button>
+                <button class="clear" data-value="C">C</button>
+                <button class="delete" data-value="DEL">DEL</button>
+                
+                <button class="number" data-value="7">7</button>
+                <button class="number" data-value="8">8</button>
+                <button class="number" data-value="9">9</button>
+                <button class="operator" data-value="/">÷</button>
+                
+                <button class="number" data-value="4">4</button>
+                <button class="number" data-value="5">5</button>
+                <button class="number" data-value="6">6</button>
+                <button class="operator" data-value="*">×</button>
+                
+                <button class="number" data-value="1">1</button>
+                <button class="number" data-value="2">2</button>
+                <button class="number" data-value="3">3</button>
+                <button class="operator" data-value="-">-</button>
+                
+                <button class="number" data-value="0">0</button>
+                <button class="decimal" data-value=".">.</button>
+                <button class="equals" data-value="=">=</button>
+                <button class="operator" data-value="+">+</button>
+            </div>
+            <div class="buttons scientific-buttons" style="display: none;">
+                <button class="sci-operator" data-value="sin">sin</button>
+                <button class="sci-operator" data-value="cos">cos</button>
+                <button class="sci-operator" data-value="tan">tan</button>
+                <button class="sci-operator" data-value="log">log</button>
+                
+                <button class="sci-operator" data-value="sqrt">√</button>
+                <button class="sci-operator" data-value="pow">x²</button>
+                <button class="sci-operator" data-value="pi">π</button>
+                <button class="sci-operator" data-value="e">e</button>
+            </div>
+        </div>
+        <div class="history-panel" style="display: none;">
+            <h3>History</h3>
+            <div id="history-list"></div>
+            <button id="clearHistory">Clear History</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
